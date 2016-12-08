@@ -41,7 +41,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (void)animateLaunchImage {
     CGSize viewSize = self.window.bounds.size;
     NSString *viewOrientation = @"Portrait";    //横屏请设置成 @"Landscape"
-    NSString *launchImage = nil;
+    NSString *launchImageName = nil;
     
     // 查找launch image
     NSArray* imagesDict = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
@@ -50,12 +50,13 @@ void uncaughtExceptionHandler(NSException *exception) {
         
         if (CGSizeEqualToSize(imageSize, viewSize) &&
             [viewOrientation isEqualToString:dict[@"UILaunchImageOrientation"]]) {
-            launchImage = dict[@"UILaunchImageName"];
+            launchImageName = dict[@"UILaunchImageName"];
         }
     }
     
     // 动画显示launch image
-    UIImageView *launchView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:launchImage]];
+    UIImage *launchImage = [UIImage imageNamed:launchImageName];
+    UIImageView *launchView = [[UIImageView alloc] initWithImage:launchImage];
     launchView.frame = self.window.bounds;
     launchView.contentMode = UIViewContentModeScaleAspectFill;
     [self.window addSubview:launchView];

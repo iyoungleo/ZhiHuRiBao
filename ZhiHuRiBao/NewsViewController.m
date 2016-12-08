@@ -62,7 +62,7 @@ extern CGFloat topNewsViewHeight;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [self.topNewsView.topScrollView.timer stop];
     [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
 }
