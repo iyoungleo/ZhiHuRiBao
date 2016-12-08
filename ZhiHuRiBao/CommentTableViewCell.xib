@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="257" id="KGk-i7-Jjw" customClass="CommentTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="256.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GvW-uY-Uav">
+                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="qqs-8v-vV5"/>
+                            <constraint firstAttribute="width" secondItem="GvW-uY-Uav" secondAttribute="height" multiplier="1:1" id="ssm-OD-THP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-cL-aQj">
+                        <rect key="frame" x="56" y="8" width="50.5" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki5-KN-1Li">
+                        <rect key="frame" x="329" y="8" width="35" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YS-Q1-fZM">
+                        <rect key="frame" x="56" y="26" width="308" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="UBk-v6-0wt"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="pVC-2U-TFM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UBk-v6-0wt"/>
+                                <exclude reference="pVC-2U-TFM"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urR-q4-O8T">
+                        <rect key="frame" x="56" y="234" width="308" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Likes" translatesAutoresizingMaskIntoConstraints="NO" id="dfF-I2-Bkp">
+                        <rect key="frame" x="299" y="6" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dfF-I2-Bkp" secondAttribute="height" multiplier="1:1" id="7vo-kB-l0S"/>
+                            <constraint firstAttribute="width" constant="20" id="Tf9-uu-Njj"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ki5-KN-1Li" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0DB-1J-H8h"/>
+                    <constraint firstItem="ejG-cL-aQj" firstAttribute="top" secondItem="GvW-uY-Uav" secondAttribute="top" id="1qP-hz-RSs"/>
+                    <constraint firstItem="Ki5-KN-1Li" firstAttribute="leading" secondItem="dfF-I2-Bkp" secondAttribute="trailing" constant="10" id="3Lf-kI-YSX"/>
+                    <constraint firstItem="Ki5-KN-1Li" firstAttribute="baseline" secondItem="ejG-cL-aQj" secondAttribute="baseline" id="5eq-8s-tz1"/>
+                    <constraint firstItem="8YS-Q1-fZM" firstAttribute="top" secondItem="ejG-cL-aQj" secondAttribute="bottom" id="7JK-CB-rbj"/>
+                    <constraint firstItem="ejG-cL-aQj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Dpc-3H-v4b"/>
+                    <constraint firstItem="urR-q4-O8T" firstAttribute="top" secondItem="8YS-Q1-fZM" secondAttribute="bottom" constant="8" symbolic="YES" id="FMw-p6-Hbm"/>
+                    <constraint firstItem="GvW-uY-Uav" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LkX-N9-VqP"/>
+                    <constraint firstItem="8YS-Q1-fZM" firstAttribute="leading" secondItem="ejG-cL-aQj" secondAttribute="leading" id="PGk-cI-z2O"/>
+                    <constraint firstItem="urR-q4-O8T" firstAttribute="leading" secondItem="8YS-Q1-fZM" secondAttribute="leading" id="QIV-uO-DYC"/>
+                    <constraint firstItem="urR-q4-O8T" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cFs-Co-IHV"/>
+                    <constraint firstItem="8YS-Q1-fZM" firstAttribute="leading" secondItem="GvW-uY-Uav" secondAttribute="trailing" id="cen-7A-8jw"/>
+                    <constraint firstItem="ejG-cL-aQj" firstAttribute="bottom" secondItem="GvW-uY-Uav" secondAttribute="bottom" id="gtY-Rw-rji"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="urR-q4-O8T" secondAttribute="bottom" id="js5-95-cQ6"/>
+                    <constraint firstItem="ejG-cL-aQj" firstAttribute="leading" secondItem="GvW-uY-Uav" secondAttribute="trailing" constant="8" symbolic="YES" id="m7C-lm-Xym"/>
+                    <constraint firstItem="8YS-Q1-fZM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="nMw-aM-8d7"/>
+                    <constraint firstItem="GvW-uY-Uav" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="oj4-UX-E2c"/>
+                    <constraint firstItem="dfF-I2-Bkp" firstAttribute="bottom" secondItem="Ki5-KN-1Li" secondAttribute="bottom" id="qI9-Ya-kcs"/>
+                    <constraint firstItem="ejG-cL-aQj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="wbV-0t-57q"/>
+                    <constraint firstItem="dfF-I2-Bkp" firstAttribute="baseline" secondItem="Ki5-KN-1Li" secondAttribute="baseline" id="zAg-6E-L6u"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1qP-hz-RSs"/>
+                        <exclude reference="Dpc-3H-v4b"/>
+                        <exclude reference="gtY-Rw-rji"/>
+                        <exclude reference="cen-7A-8jw"/>
+                        <exclude reference="zAg-6E-L6u"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="ejG-cL-aQj" id="mqP-9Z-Vu6"/>
+                <outlet property="avatarImageView" destination="GvW-uY-Uav" id="yrg-GC-jX6"/>
+                <outlet property="contentLabel" destination="8YS-Q1-fZM" id="42U-yN-oyF"/>
+                <outlet property="likesLabel" destination="Ki5-KN-1Li" id="2GS-Rn-nX1"/>
+                <outlet property="timeLabel" destination="urR-q4-O8T" id="198-g7-xEo"/>
+            </connections>
+            <point key="canvasLocation" x="238" y="243.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Likes" width="29" height="29"/>
+    </resources>
+</document>
